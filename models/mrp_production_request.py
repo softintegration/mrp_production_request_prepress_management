@@ -13,6 +13,8 @@ class MrpProductionRequest(models.Model):
     @api.onchange('product_id','company_id')
     def _onchange_product_id(self):
         res = super(MrpProductionRequest, self)._onchange_product_id()
+        if self.env.context.get('ignore_update_prepress_proof'):
+            return res
         self._update_prepress_proof()
         return res
 
