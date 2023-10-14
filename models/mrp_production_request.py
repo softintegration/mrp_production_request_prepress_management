@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 
 from odoo import models, fields, api, _
-from odoo.exceptions import ValidationError
+from odoo.exceptions import UserError
 
 
 class MrpProductionRequest(models.Model):
@@ -32,6 +32,12 @@ class MrpProductionRequest(models.Model):
                 prepress_proof = self.env['prepress.proof']._get_by_product(request.product_id)
                 request.prepress_proof_id = prepress_proof and prepress_proof.ids[0] or False
         return production_order_requests
+
+    def _check_state(self, state):
+        super(MrpProductionRequest,self)._check_state(state)
+        for each in self:
+            if state in ('validated', 'done') and each.prepress_proof_id and each.prepress_proof_id.state != 'validated':
+                raise UserError(_('The Prepress proof must be validated!'))
 
 
 
