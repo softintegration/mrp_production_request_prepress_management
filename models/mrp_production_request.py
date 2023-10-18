@@ -51,8 +51,8 @@ class MrpProductionRequest(models.Model):
     def _check_state(self, state):
         super(MrpProductionRequest,self)._check_state(state)
         for each in self:
-            if state in ('validated', 'done') and each.prepress_proof_id and each.prepress_proof_id.state != 'validated':
-                raise UserError(_('The Prepress proof must be validated!'))
+            if state in ('validated', 'done') and each.prepress_proof_id and each.prepress_proof_id.state not in ('validated','flashed'):
+                raise UserError(_('The Prepress proof must be validated or flashed!'))
 
 
 

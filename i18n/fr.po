@@ -41,5 +41,5 @@ msgstr "BAT"
 #. module: mrp_production_request_prepress_management
 #: code:addons/mrp_production_request_prepress_management/models/mrp_production_request.py:0
 #, python-format
-msgid "The Prepress proof must be validated!"
-msgstr "Le statut du BAT doit être validé"
+msgid "The Prepress proof must be validated or flashed!"
+msgstr "Le statut du BAT doit être validé ou flashé"
