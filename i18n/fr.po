@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-14 14:31+0000\n"
-"PO-Revision-Date: 2023-10-14 14:31+0000\n"
+"POT-Creation-Date: 2023-10-25 09:34+0000\n"
+"PO-Revision-Date: 2023-10-25 09:34+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,12 +16,22 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: mrp_production_request_prepress_management
+#: code:addons/mrp_production_request_prepress_management/models/prepress_proof.py:0
+#, python-format
+msgid ""
+"All related manufacturing requests related to proof %s must be draft or "
+"cancelled"
+msgstr "Toutes les demandes de fabrication liées au BAT %s doivent être brouillon ou annulées"
+
+#. module: mrp_production_request_prepress_management
 #: code:addons/mrp_production_request_prepress_management/models/mrp_production_request.py:0
 #, python-format
 msgid ""
 "Can not create manufacturing order for request %s ,the related prepress "
 "proof is quarantined!"
-msgstr "Impossible de créer un ordre de fabrication pour la demande %s ,le BAT est en quarantaine!"
+msgstr ""
+"Impossible de créer un ordre de fabrication pour la demande %s ,le BAT est "
+"en quarantaine!"
 
 #. module: mrp_production_request_prepress_management
 #: model:ir.model,name:mrp_production_request_prepress_management.model_mrp_production_request
