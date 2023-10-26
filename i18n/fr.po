@@ -19,9 +19,10 @@ msgstr ""
 #: code:addons/mrp_production_request_prepress_management/models/prepress_proof.py:0
 #, python-format
 msgid ""
-"All related manufacturing requests related to proof %s must be draft or "
-"cancelled"
-msgstr "Toutes les demandes de fabrication liées au BAT %s doivent être brouillon ou annulées"
+"Can not cancel/quarantine proof related to waiting or validated manufacturing "
+"request!"
+msgstr "Impossible d'annuler/mettre en quarantaine un BAT lié à une demande de fabrication "
+"En attente ou validée"
 
 #. module: mrp_production_request_prepress_management
 #: code:addons/mrp_production_request_prepress_management/models/mrp_production_request.py:0
