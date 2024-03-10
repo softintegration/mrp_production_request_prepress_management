@@ -4,7 +4,7 @@ from odoo import models, fields, api, _
 from odoo.exceptions import UserError,ValidationError
 
 # if the related manufacturing requests are in one of this states,we have to prevent the canceling of the prepress proof
-AVOIDED_CANCEL_MANUFACTURING_REQUEST_STATES = ['waiting','validated']
+AVOIDED_CANCEL_MANUFACTURING_REQUEST_STATES = ['waiting','validated','planned']
 
 class PrepressProof(models.Model):
     _inherit = 'prepress.proof'
@@ -31,7 +31,7 @@ class PrepressProof(models.Model):
     def _check_related_mrp_production_request(self):
         for each in self:
             if set(each._related_mrp_production_request().mapped("state")).intersection(set(AVOIDED_CANCEL_MANUFACTURING_REQUEST_STATES)):
-                raise ValidationError(_("Can not cancel/quarantine proof related to waiting or validated manufacturing request!"))
+                raise ValidationError(_("Can not cancel/quarantine proof related to waiting/Planned or validated manufacturing request!"))
 
 
     # add some constraints to quarantine

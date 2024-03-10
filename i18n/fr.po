@@ -19,10 +19,10 @@ msgstr ""
 #: code:addons/mrp_production_request_prepress_management/models/prepress_proof.py:0
 #, python-format
 msgid ""
-"Can not cancel/quarantine proof related to waiting or validated manufacturing "
+"Can not cancel/quarantine proof related to waiting/Planned or validated manufacturing "
 "request!"
 msgstr "Impossible d'annuler/mettre en quarantaine un BAT lié à une demande de fabrication "
-"En attente ou validée"
+"En attente/Planifiée ou validée"
 
 #. module: mrp_production_request_prepress_management
 #: code:addons/mrp_production_request_prepress_management/models/mrp_production_request.py:0
